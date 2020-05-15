@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "铁道大学答题插件",
+	"version": "2.0",
+	"description": "铁道大学答题插件",
+	"author": "xugj",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["http://jxjy.stdu.edu.cn/student/BootStrap_zyxq.aspx?*"],
+			"js": ["jquery.js", "content-script.js"]
+		}
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	],
+	"permissions": [
+        "http://localhost/tp/public/index?question=1"
+	]
+}
